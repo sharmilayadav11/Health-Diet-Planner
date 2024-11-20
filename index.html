@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial initial-scale=1.0">
+    <title>Health Diet Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Health Diet Planner</h1>
+        <form id="diet-form">
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="age">Age (years):</label>
+            <input type="number" id="age" required>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" step="0.1" required> <!-- Allow decimal input -->
+
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" required>
+
+            <label for="activity">Activity Level:</label>
+            <select id="activity" required>
+                <option value="1.2">Sedentary (little or no exercise)</option>
+                <option value="1.375">Light Activity (light exercise/sports 1-3 days/week)</option>
+                <option value="1.55">Moderate Activity (moderate exercise/sports 3-5 days/week)</option>
+                <option value="1.725">Very Active (hard exercise/sports 6-7 days a week)</option>
+                <option value="1.9">Super Active (very hard exercise/physical job or training twice a day)</option>
+            </select>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="result" class="result">
+            <h3>Your Daily Calorie Needs: <span id="calories">0</span> kcal</h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
